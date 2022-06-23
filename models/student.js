@@ -27,6 +27,11 @@ module.exports.deleteOneStudent = (id) => {
   });
 };
 
+// ecriture nouvelle méthode pour supprimer tout, marche pas :
+// module.exports.deleteAllStudents = () => {
+//   return db.student.deleteMany();
+// };
+
 module.exports.patchOneStudent = async (data) => {
   return await db.student
     .update({

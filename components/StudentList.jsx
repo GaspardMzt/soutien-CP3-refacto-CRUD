@@ -21,8 +21,13 @@ const StudentList = () => {
     axios.delete(`/api/students/${id}`).then(() => fetchUserList());
   };
 
+  const handleDeleteAll = () => {
+    axios.delete(`/api/students/`);
+  };
+
   return (
     <div className={style.listContainer}>
+      <button onClick={handleDeleteAll}>DELETE ALL</button>
       {students.map((user) => {
         return (
           <div key={user.id} className={style.mapCardContainer}>
